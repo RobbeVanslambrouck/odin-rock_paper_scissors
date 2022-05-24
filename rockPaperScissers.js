@@ -12,7 +12,9 @@ function playRound(playerSelection, computerSelection) {
     if(p === c) {
         return "It's a Tie"
     }
-    if (p === "rock" && c === "scissers" || p === "paper" && c === "rock" || p === "scissers" && c === "paper") {
+    if (p === "rock" && c === "scissers" || 
+        p === "paper" && c === "rock" || 
+        p === "scissers" && c === "paper") {
         return "You Win! " + playerSelection + " beats " + computerSelection;
     }
     return "You Lose! " + computerSelection + " beats " + playerSelection;
