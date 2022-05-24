@@ -20,7 +20,7 @@ function playRound(playerSelection, computerSelection) {
     return "You Lose! " + computerSelection + " beats " + playerSelection;
 }
 
-function game() {
+function fiveRound() {
     playerScore = 0;
 
     for(let i=0; i < 5; i++) {
@@ -45,4 +45,16 @@ function game() {
     return "this game ends in a Tie"
 }
 
-console.log(game())
+function OnClickRound(playerSelection) {
+    let result = playRound(playerSelection, computerPlay());
+    console.log(result);
+    return result;
+}
+
+const btnRock = document.querySelector('#rock');
+const btnPaper = document.querySelector('#paper');
+const btnScissors = document.querySelector('#scissors');
+
+btnRock.addEventListener('click', () => OnClickRound("rock"));
+btnPaper.addEventListener('click', () => OnClickRound("paper"));
+btnScissors.addEventListener('click', () => OnClickRound("scissors"));
